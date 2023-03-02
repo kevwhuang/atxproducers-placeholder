@@ -1,0 +1,231 @@
+@font-face {
+    font-family: Audiowide;
+    src: url(../assets/audiowide-regular.ttf);
+}
+
+body {
+    background: #222;
+    font-family: Audiowide, fantasy;
+    overflow: hidden;
+}
+
+.material-symbols-outlined {
+    color: teal;
+    cursor: pointer;
+    font-size: var(--s6);
+    font-variation-settings: 'FILL' 0, 'wght' 700, 'GRAD' 200, 'opsz' 48;
+    user-select: none;
+}
+
+.material-symbols-outlined:active {
+    font-variation-settings: 'FILL' 1;
+}
+
+:root {
+    --s1: 9.89px;
+    --s2: 16.00px;
+    --s3: 25.89px;
+    --s4: 41.89px;
+    --s5: 67.77px;
+    --s6: 109.66px;
+}
+
+/* ============================================================================================== */
+
+#landing {
+    animation: 15s ease-in-out fade;
+    left: 50%;
+    letter-spacing: 0.5rem;
+    opacity: 0;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+    width: 100%;
+}
+
+#landing h1 {
+    animation: 5s ease-in-out h1;
+    background: #222;
+    color: #ddd;
+    font-size: var(--s5);
+    font-weight: bolder;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+#landing h2 {
+    animation: 5s ease-in-out forwards h2;
+    background: #222;
+    color: slateblue;
+    font-size: var(--s3);
+    font-weight: bolder;
+    opacity: 0;
+    padding: 0.5rem;
+}
+
+#player {
+    animation: 15s 15s forwards player;
+    left: 50%;
+    opacity: 0;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+#unsplash {
+    animation: 15s infinite fade;
+    background-clip: content-box;
+    background-image: url(https://source.unsplash.com/random/?music,producer?v=1);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    opacity: 0;
+    width: 100vw;
+}
+
+/* ============================================================================================== */
+
+@keyframes fade {
+
+    5% {
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    95% {
+        opacity: 0;
+    }
+
+}
+
+@keyframes h1 {
+
+    0% {
+        margin-bottom: -35px;
+    }
+
+    20% {
+        letter-spacing: 0.5rem;
+    }
+
+    40% {
+        letter-spacing: 2rem;
+    }
+
+    80% {
+        letter-spacing: 0.5rem;
+        margin-bottom: -35px;
+    }
+
+    100% {
+        margin-bottom: 15px;
+    }
+
+}
+
+@keyframes h2 {
+
+    80% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+@keyframes player {
+
+    5% {
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+/* ============================================================================================== */
+
+@media (hover: hover) {
+
+    .material-symbols-outlined:hover {
+        color: peru;
+    }
+
+}
+
+@media (max-width: 850px) {
+
+    #landing h1 {
+        font-size: var(--s4);
+    }
+
+    #landing h2 {
+        font-size: var(--s2);
+    }
+
+    @keyframes h1 {
+
+        0% {
+            margin-bottom: -35px;
+        }
+
+        20% {
+            letter-spacing: 0.5rem;
+        }
+
+        40% {
+            letter-spacing: 1rem;
+        }
+
+        80% {
+            letter-spacing: 0.5rem;
+            margin-bottom: -35px;
+        }
+
+        100% {
+            margin-bottom: 15px;
+        }
+
+    }
+
+}
+
+@media (max-width:500px) {
+
+    @keyframes h1 {
+
+        0% {
+            margin-bottom: -35px;
+        }
+
+        80% {
+            margin-bottom: -35px;
+        }
+
+        100% {
+            margin-bottom: 15px;
+        }
+
+    }
+
+}
